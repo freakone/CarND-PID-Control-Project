@@ -19,7 +19,12 @@ private:
 
   double cap;
 
+  int counter;
+  double twiddle_error;
+
 public:
+
+  void doRecalc(int times, double threshold);
   /*
   * Constructor
   */
