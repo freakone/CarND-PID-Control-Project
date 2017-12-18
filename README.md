@@ -5,15 +5,15 @@ Self-Driving Car Engineer Nanodegree Program
 
 ### P
 
-Proportional module is responsible for instant reaction. Increasing it means lowering the car response time but also increases the oscillations.
+Proportional module is responsible for instant reaction. It is corresponding to the present value of the crosstrack error. Increasing the Kp gain results in lowering the car response time but also increasing the oscillations.
 
 ### I
 
-Integral module is responsible for correction of error sum from the past. Its value needs to be small, as errors are cumulating quickly.
+Integral module is standing for bias correction. It is responsible for correcting sustained error values and collecting all errors from the past. Ki coefficient value needs to be small, as errors are cumulating quickly.
 
 ### D
 
-Derrivative module is responsible for including the previous measurement in the current error calculations. It is lowering the time of the regulation as it is calculating from delta - it has large value only in transition states.
+Derrivative module is accounting for future error trends by current error change rate. Derrivative part helps with overshooting and lowering the time of the regulation as it is calculating from delta - it has large value only in transition states.
 
 ## Describe how the final hyperparameters were chosen.
 
